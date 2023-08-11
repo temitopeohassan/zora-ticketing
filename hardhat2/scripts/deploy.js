@@ -2,19 +2,19 @@ const hre = require("hardhat");
 require("dotenv").config({ path: ".env" });
 
 async function main() {
-  // URL from where we can extract the metadata for a Zticketing
+  // URL from where we can extract the metadata for a ZticketNFT
 
   /*
   DeployContract in ethers.js is an abstraction used to deploy new smart contracts,
-  so ZticketingContract here is a factory for instances of our Zticketing contract.
+  so ZticketNFTContract here is a factory for instances of our ZticketNFT contract.
   */
   // here we deploy the contract
- const ZticketingContract = await hre.ethers.deployContract("Zticketing");
+ const ZticketNFTContract = await hre.ethers.deployContract("ZticketNFT");
 
-  await ZticketingContract.waitForDeployment();
+  await ZticketNFTContract.waitForDeployment();
 
  // print the address of the deployed contract
-  console.log("Zticketing Contract Address:", ZticketingContract.target);
+  console.log("ZticketNFT Contract Address:", ZticketNFTContract.target);
 }
 
 // Call the main function and catch if there is any error

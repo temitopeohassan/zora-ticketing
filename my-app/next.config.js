@@ -1,4 +1,13 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {}
+const dotenv = require('dotenv');
 
-module.exports = nextConfig
+module.exports = () => {
+  dotenv.config();
+
+  const nextConfig = {
+    reactStrictMode: true,
+    // Your additional Next.js configuration options go here
+  };
+
+  return nextConfig;
+};
+

@@ -39,6 +39,7 @@ const providerOptions = {
   },
 };
 
+
 let web3Modal: Web3Modal;
 if (typeof window !== 'undefined') {
   web3Modal = new Web3Modal({
